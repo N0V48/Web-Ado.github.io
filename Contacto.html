@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - ADO</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        /* Ajustes específicos para que el formulario sea Neón */
+        .form-control {
+            background: #001d3d !important;
+            border: 1px solid #003566;
+            color: white !important;
+        }
+
+        .form-control:focus {
+            border-color: #00A8E8;
+            box-shadow: 0 0 10px #00A8E8;
+        }
+
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* Botón personalizado con tus colores */
+        .btn-custom {
+            background: #00A8E8;
+            color: #000000;
+            font-weight: bold;
+            border: none;
+            padding: 10px 30px;
+            transition: 0.3s;
+        }
+
+        .btn-custom:hover {
+            background: white;
+            box-shadow: 0 0 20px #00A8E8;
+            color: #000000;
+        }
+
+        /* Caja de ubicación estilizada */
+        .location {
+            background: #001d3d;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #00A8E8;
+        }
+
+        /* Estilo para los iconos de canciones */
+        .social-links-contact a {
+            font-size: 2.5rem;
+            color: #00A8E8;
+            margin-right: 20px;
+            transition: 0.3s;
+        }
+
+        .social-links-contact a:hover {
+            color: white;
+            text-shadow: 0 0 15px #00A8E8;
+        }
+
+        /* AJUSTES MODO CLARO PARA CONTACTO */
+        body.light-mode .form-control {
+            background: #ffffff !important;
+            border-color: #003566;
+            color: #001d3d !important;
+        }
+        body.light-mode .form-control::placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+        body.light-mode .location {
+            background: #f0f8ff;
+            border-left-color: #003566;
+        }
+        body.light-mode .location h5 {
+            color: #001d3d !important;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container"> 
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="Imagenes/FlorAdo3.webp" alt="logo" width="30" height="30" class="me-2">
+                    <span class="fw-bold text-info">ADO</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Que es Ado.html">¿Quien es Ado?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contacto.html">Contactos</a></li>
+                        
+                        <div class="ms-lg-3 d-flex align-items-center social-bar-nav border-end pe-3 border-secondary">
+                            <a href="https://open.spotify.com" class="mx-2 fs-5 text-info"><i class="bi bi-spotify"></i></a>
+                            <a href="https://www.instagram.com/ado_staff_official/" class="mx-2 fs-5 text-info"><i class="bi bi-instagram"></i></a>
+                            <a href="https://x.com/ado_staff" class="mx-2 fs-5 text-info"><i class="bi bi-twitter-x"></i></a>
+                            <a href="https://www.youtube.com/@Ado1024" class="mx-2 fs-5 text-info"><i class="bi bi-youtube"></i></a>
+                        </div>
+
+                        <div class="theme-switch-wrapper ms-3" style="cursor: pointer;">
+                            <i id="theme-icon" class="bi bi-sun-fill" style="color: #00A8E8; font-size: 1.2rem;"></i>
+                        </div>
+                    </ul>
+                </div>
+            </div> 
+        </nav> 
+    </header>
+
+    <section class="hero">
+    <video class="video-responsive" autoplay muted loop playsinline onclick="this.muted=!this.muted" style="z-index: 2; position: relative;">
+        <source src="Ado Contactos.mp4" type="video/mp4">
+    </video>  
+    </section>  
+    <br>
+        <div class="hero-content text-center">
+            <h1 class="display-3 fw-bold text-uppercase" style="text-shadow: 0 0 20px #00A8E8; color: #00A8E8;">
+                Contactos
+            </h1>
+        </div>
+    
+
+    <section class="container my-5 py-5">
+        <div class="row g-5">
+
+            <div class="col-md-6">
+                <h2 class="mb-4">Envíanos un mensaje</h2>
+                <form>
+                    <div class="mb-3">
+                        <label class="form-label text-info">Nombre completo</label>
+                        <input type="text" class="form-control" placeholder="Ej. Ado Fan">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-info">Correo Electrónico</label>
+                        <input type="email" class="form-control" placeholder="tu@email.com">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label text-info">Mensaje</label>
+                        <textarea class="form-control" rows="5" placeholder="Cuéntanos algo..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-custom w-100">ENVIAR MENSAJE</button>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <h2 class="mb-4">Escucha mi música</h2>
+                <div class="social-links-contact mb-5">
+                    <a href="https://www.youtube.com/@Ado1024" target="_blank"><i class="bi bi-youtube"></i></a>
+                    <a href="https://open.spotify.com/intl-es/artist/6mEQK9m2krja6X1cfsAjfl?si=DlMaNYuLQYmJ4wIm33Vpzw" target="_blank"><i class="bi bi-spotify"></i></a>
+                    <a href="https://www.instagram.com/ado_staff_official/" target="_blank"><i class="bi bi-instagram"></i></a>
+                </div>
+
+                <h2 class="mb-4">Ubicación</h2>
+                <div class="location">
+                    <h5 class="text-white fw-bold">Tokio, Japón</h5>
+                    <p class="mb-0 opacity-75">
+                        Ado desarrolla su carrera principalmente en Japón, donde ha transformado la industria 
+                        musical desde las sombras, manteniendo su identidad como un enigma global.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-black py-5 border-top border-dark">
+        <div class="container text-center">
+            <div class="social-row mb-4">
+                <a href="https://www.youtube.com/@Ado1024" target="_blank" class="social-item"><i class="bi bi-youtube"></i> YouTube</a>
+                <a href="https://open.spotify.com/artist/6m4UvYGrd45yX8wQpbyCqU" target="_blank" class="social-item"><i class="bi bi-spotify"></i> Spotify</a>
+                <a href="https://www.instagram.com/ado_staff_official/" target="_blank" class="social-item"><i class="bi bi-instagram"></i> Instagram</a>
+                <a href="https://x.com/ado_staff" target="_blank" class="social-item"><i class="bi bi-twitter-x"></i> Twitter</a>
+            </div>
+            <p class="text-secondary small mb-0">© 2026 Página Fan sobre Ado. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        // Cargar preferencia guardada
+        if (localStorage.getItem('theme') === 'light') {
+            body.classList.add('light-mode');
+            themeIcon.classList.replace('bi-sun-fill', 'bi-moon-fill');
+            themeIcon.style.color = '#001d3d';
+        }
+
+        themeIcon.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            let theme = 'dark';
+
+            if (body.classList.contains('light-mode')) {
+                themeIcon.classList.replace('bi-sun-fill', 'bi-moon-fill');
+                themeIcon.style.color = '#001d3d';
+                theme = 'light';
+            } else {
+                themeIcon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+                themeIcon.style.color = '#00A8E8';
+                theme = 'dark';
+            }
+            localStorage.setItem('theme', theme);
+        });
+    </script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

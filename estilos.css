@@ -1,0 +1,389 @@
+body {
+    background-color: #000814;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    padding-top: 60px;  /* Espacio para la navbar fija */
+}
+/* Ajuste de padding para pantallas medianas/pequeñas */
+@media (max-width: 991px) {
+    body { padding-top: 65px; }
+}
+
+/* nav bar */
+.navbar {
+    background: rgba(0, 8, 20, 0.9) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid #00A8E8; /* Línea Cian */
+    padding: 10px 0;
+}
+
+.navbar .navbar-brand, .navbar .nav-link {
+    color: #ffffff !important;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.navbar .nav-link:hover {
+    color: #00A8E8 !important;
+    text-shadow: 0 0 10px #00A8E8;
+}
+
+/* Menú desplegable en móviles */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: #000814;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        border: 1px solid #001d3d;
+    }
+}
+
+/* Estilo del botón hamburguesa*/
+.navbar-toggler {
+    border-color: #00A8E8 !important;
+    padding: 0.5rem;
+}
+
+.navbar-toggler-icon {
+    /* Filtro para convertir el icono a color Cian */
+    filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(160deg) brightness(100%) contrast(105%);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 10px #00A8E8;
+    outline: none;
+}
+
+/* hero */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 60vh; 
+    background: black;
+    overflow: hidden;
+}
+
+/* Busca esta sección en tu CSS y reemplázala */
+.hero video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;   /* Cambiado de auto a 100% */
+    height: 100%;  /* Cambiado de auto a 100% */
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Esto hace que el video se comporte como background-size: cover */
+    z-index: 0;
+}
+
+/* Optimización para móviles en tus Media Queries */
+@media (max-width: 576px) {
+    .hero { 
+        height: 50vh; /* Un poco más de altura ayuda a que el video luzca mejor en vertical */
+    }
+    .hero video {
+        /* En móviles muy estrechos, forzamos a que siempre cubra todo */
+        object-fit: cover; 
+    }
+}
+
+/* Degradado para fundir el video con el resto de la web */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 102%;
+    background: linear-gradient(to bottom, rgba(0,8,20,0) 50%, rgba(0,8,20,1) 100%);
+    z-index: 1;
+}
+
+/* TITULOS */
+h2, h3 {
+    color: #00A8E8;
+    text-shadow: 0 0 15px rgba(0, 168, 232, 0.5);
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.img-glow {
+    border: 2px solid #00A8E8;
+    box-shadow: 0 0 30px rgba(0, 168, 232, 0.3);
+    max-width: 100%;
+    height: auto;
+}
+
+/* TARJETAS */
+.card {
+    background: #001d3d !important; /* Azul oscuro mantenido */
+    border: 1px solid #003566;
+    border-radius: 10px;
+    transition: all 0.4s ease;
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: #00A8E8;
+    box-shadow: 0 0 20px rgba(0, 168, 232, 0.4);
+}
+
+.card-title {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+/* BOTONES */
+.btn-danger {
+    background: #00A8E8 !important;
+    color: #000814 !important;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 168, 232, 0.5);
+}
+
+.btn-danger:hover {
+    background: #ffffff !important;
+    box-shadow: 0 0 20px #00A8E8;
+}
+
+/* ESPECIALES -REPRODUCTOR */
+.bg-black {
+    background: linear-gradient(135deg, #000814 0%, #003566 100%) !important;
+}
+
+/* Animación de pulso para iconos de Play */
+@keyframes pulse-neon {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.play-icon-wrapper i {
+    animation: pulse-neon 2s infinite ease-in-out;
+}
+
+.play-icon-wrapper {
+    transition: transform 0.3s ease;
+}
+
+/* Reproductor de Audio */
+.custom-player {
+    background: #001d3d;
+    border: 1px solid #00A8E8;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 168, 232, 0.2);
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #001d3d;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: #00A8E8;
+}
+
+/*Ajustes para diferentes tamaños de pantalla.*/
+
+/* Móviles */
+@media (max-width: 576px) {
+    .hero { height: 40vh; }
+    h2 { font-size: 1.5rem; }
+    .nosotros { text-align: center; }
+    .social-row { flex-direction: column; gap: 15px; }
+}
+
+/* Tablets */
+@media (min-width: 577px) and (max-width: 992px) {
+    .hero { height: 50vh; }
+    .container { padding: 0 30px; }
+}
+
+/* Escritorio Grande */
+@media (min-width: 1200px) {
+    .hero { height: 75vh; }
+}
+
+/* FOOTER Y REDES */
+.social-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.social-item {
+    text-decoration: none;
+    color: #00A8E8;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.social-item:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffffff;
+}
+
+
+
+/* NAV BAR */
+/* Iluminación de letras en la Navbar - Modo Claro */
+body.light-mode .navbar-nav .nav-link {
+    color: #003566 !important; /* Azul oscuro legible de base */
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+body.light-mode .navbar-nav .nav-link:hover,
+body.light-mode .navbar-nav .nav-link.active {
+    color: #ffffff !important; /* La letra se vuelve blanca */
+    text-shadow: 0 0 8px #00509d, 0 0 15px #00A8E8; 
+    
+}
+body.light-mode .navbar-nav .nav-link:hover::after {
+    width: 100%;
+    box-shadow: 0 0 5px #00A8E8;
+}
+
+/* redes */
+body.light-mode .social-bar-nav a {
+    color: #003566 !important; 
+}
+
+body.light-mode .social-bar-nav a:hover {
+    color: #ffffff !important; /* El icono se vuelve blanco "brillante" */ 
+}
+
+
+
+
+
+/* MODO CLARO */
+
+/* Fondo General con tu azul seleccionado */
+body.light-mode {
+    background-color: #7ac8ff !important; /* Tu color de referencia */
+    color: #001d3d !important;           /* Azul noche para el texto */
+}
+
+/* Secciones con degradados */
+body.light-mode .bg-black, 
+body.light-mode footer,
+body.light-mode section[style*="background: linear-gradient"] {
+    background: linear-gradient(135deg, #7ac8ff 0%, #b3e5fc 100%) !important;
+    border-color: #00A8E8 !important;
+}
+
+/* Ajuste del video Hero */
+body.light-mode .hero::before {
+    background: linear-gradient(to bottom, rgba(122,200,255,0) 50%, rgba(122,200,255,1) 100%) !important;
+}
+
+/* Navbar */
+body.light-mode .navbar {
+    background: rgba(122, 200, 255, 0.95) !important;
+    border-bottom: 2px solid #00A8E8 !important;
+}
+
+body.light-mode .navbar .nav-link, 
+body.light-mode .navbar .navbar-brand,
+body.light-mode .navbar .navbar-brand span {
+    color: #001d3d !important;
+    text-shadow: none !important;
+}
+
+/* Ajuste de Cards */
+body.light-mode .card {
+    background: #ffffff !important;
+    border: 2px solid #00A8E8 !important;
+}
+
+body.light-mode .card-title {
+    color: #0077b6 !important;
+}
+
+/* Títulos y Estadísticas */
+body.light-mode h2, 
+body.light-mode h3, 
+body.light-mode .stats-number {
+    color: #003566 !important; 
+    text-shadow: none !important;
+}
+
+/* Iconos y Redes Sociales */
+body.light-mode .social-item,
+body.light-mode .social-bar-nav a {
+    color: #003566 !important;
+}
+
+/* Botones */
+body.light-mode .btn-danger {
+    background-color: #00A8E8 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 10px rgba(0, 168, 232, 0.3);
+}
+
+/* Menú  */
+@media (max-width: 991px) {
+    body.light-mode .navbar-collapse {
+        background: #7ac8ff !important;
+        border: 2px solid #00A8E8 !important;
+    }
+}
+
+
+/* Corrección de legibilidad para textos .text-info y .lead */
+body.light-mode .text-info, 
+body.light-mode .lead.text-info {
+    color: #003566 !important; 
+    opacity: 1 !important;     
+    font-weight: 500;          
+}
+
+/* Específico para la frase destacada */
+body.light-mode p.text-info em {
+    color: #00509d !important; 
+    border-left: 3px solid #00A8E8; 
+    padding-left: 10px;
+}
+
+body.light-mode div[style*="background: #00A8E8"] {
+    background-color: #003566 !important;
+    box-shadow: none !important;
+}
+
+/* Ajustes para el Blog en Modo Claro */
+body.light-mode .post {
+    border-bottom-color: #00A8E8 !important;
+}
+
+body.light-mode .post h4 {
+    color: #003566 !important;
+}
+
+body.light-mode .desc-post {
+    color: #001d3d !important;
+    opacity: 0.9 !important;
+}
+
+body.light-mode .fecha {
+    color: #00509d !important;
+}
+
+body.light-mode .btn-blog {
+    border-color: #003566 !important;
+    color: #003566 !important;
+}
+
+body.light-mode .btn-blog:hover {
+    background-color: #003566 !important;
+    color: #ffffff !important;
+}
+
+
+
+
+body.light-mode {
+    background-color: #7ac8ff !important;
+    color: #001d3d !important;
+}

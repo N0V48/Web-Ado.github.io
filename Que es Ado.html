@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quién es ADO? - Biografía</title>
+    
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        /* Estilos específicos para esta página que complementan estilos.css */
+        .timeline {
+            border-left: 3px solid #00A8E8; /* Usando el color directamente */
+            padding-left: 30px;
+            position: relative;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 40px;
+        }
+
+        /* El punto de la línea de tiempo */
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -38px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            background-color: #00A8E8;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #00A8E8;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            letter-spacing: 5px;
+            text-shadow: 0 0 20px #00A8E8;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .timeline { margin-left: 20px; }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container"> 
+                <a class="navbar-brand d-flex align-items-center" href="index.html">
+                    <img src="Imagenes/FlorAdo3.webp" alt="logo" width="30" height="30" class="me-2">
+                    <span class="fw-bold text-info">ADO</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <li class="nav-item"><a class="nav-link active" href="index.html">INICIO</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Que es Ado.html">¿Quien es Ado?</a></li>
+                        <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Contacto.html">Contactos</a></li>
+                        
+                        <div class="ms-lg-3 d-flex align-items-center social-bar-nav border-end pe-3 border-secondary">
+                            <a href="https://open.spotify.com" class="mx-2 fs-5 text-info"><i class="bi bi-spotify"></i></a>
+                            <a href="https://www.instagram.com/ado_staff_official/" class="mx-2 fs-5 text-info"><i class="bi bi-instagram"></i></a>
+                            <a href="https://x.com/ado_staff" class="mx-2 fs-5 text-info"><i class="bi bi-twitter-x"></i></a>
+                            <a href="https://www.youtube.com/@Ado1024" class="mx-2 fs-5 text-info"><i class="bi bi-youtube"></i></a>
+                        </div>
+
+                        <div class="theme-switch-wrapper ms-3" style="cursor: pointer;">
+                            <i id="theme-icon" class="bi bi-sun-fill" style="color: #00A8E8; font-size: 1.2rem;"></i>
+                        </div>
+                    </ul>
+                </div>
+            </div> 
+        </nav> 
+    </header>
+
+    <section class="hero">
+    <video class="video-responsive" autoplay muted loop playsinline onclick="this.muted=!this.muted" style="z-index: 2; position: relative;">
+        <source src="Quien es ado.mp4" type="video/mp4">
+    </video>  
+    </section>
+
+<section class="py-5"> 
+    <div class="container">
+        <div class="hero-content text-center">
+            <h1 class="display-3 fw-bold text-uppercase mb-3" style="text-shadow: 0 0 20px #00A8E8; color: #00A8E8;">
+                ¿Quién es Ado?
+            </h1>
+            <p class="lead text-info opacity-75">La voz que revolucionó el J-Pop desde las sombras</p>
+            
+            <div class="mx-auto mt-4" style="width: 60px; height: 2px; background: #00A8E8; box-shadow: 0 0 10px #00A8E8;"></div>
+        </div>
+    </div>
+</section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 order-2 order-md-1">
+                    <h2 class="mb-4">Una historia de internet</h2>
+                    <p>Soy una cantante japonesa que comenzó su camino en la música a través de internet, compartiendo mis interpretaciones como <strong>"utaite"</strong>. Desde muy joven encontré en la música una forma de expresar mis emociones y mi forma de ver el mundo.</p>
+                    <p>Mi carrera dio un salto exponencial con <strong>"Usseewa"</strong>, una canción que se volvió el himno de una generación. Prefiero mantener mi identidad en secreto; para mí, la música debe brillar por sí misma, sin rostros ni etiquetas innecesarias.</p>
+                    <p class="text-info"><em>"No necesito que me vean, necesito que me escuchen."</em></p>
+                </div>
+                <div class="col-md-6 text-center order-1 order-md-2 mb-4">
+                    <img src="Imagenes/ado1.jpg" class="img-fluid rounded img-glow" alt="Ado Profile">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-black">
+        <div class="container">
+            <h2 class="text-center mb-5">Trayectoria</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h5 class="text-info">2017 - Los Inicios</h5>
+                    <p>Comienza el viaje subiendo covers a plataformas digitales como utaite, ganando respeto en la comunidad underground.</p>
+                </div>
+                <div class="timeline-item">
+                    <h5 class="text-info">2020 - El Fenómeno Usseewa</h5>
+                    <p>Lanzamiento de su debut oficial. La canción rompe récords y se convierte en un fenómeno viral en Japón y el mundo.</p>
+                </div>
+                <div class="timeline-item">
+                    <h5 class="text-info">2022 - One Piece & Uta</h5>
+                    <p>Ado pone voz a Uta en <em>One Piece Film: Red</em>, dominando las listas globales con el álbum "Uta's Songs".</p>
+                </div>
+                <div class="timeline-item">
+                    <h5 class="text-info">Actualidad - Gira Mundial</h5>
+                    <p>Consolidada como la voz más importante del J-Pop moderno, llevando su gira "Wish" a escenarios internacionales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-black py-5 border-top border-dark">
+        <div class="container text-center">
+            <div class="social-row mb-4">
+                <a href="https://www.youtube.com/@Ado1024" target="_blank" class="social-item"><i class="bi bi-youtube"></i> YouTube</a>
+                <a href="https://open.spotify.com/artist/6m4UvYGrd45yX8wQpbyCqU" target="_blank" class="social-item"><i class="bi bi-spotify"></i> Spotify</a>
+                <a href="https://www.instagram.com/ado_staff_official/" target="_blank" class="social-item"><i class="bi bi-instagram"></i> Instagram</a>
+                <a href="https://x.com/ado_staff" target="_blank" class="social-item"><i class="bi bi-twitter-x"></i> Twitter</a>
+            </div>
+            <p class="text-secondary small mb-0">© 2026 Página Fan sobre Ado. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const themeIcon = document.getElementById('theme-icon');
+        const body = document.body;
+
+        //revisar si ya existía una preferencia guardada
+        const currentTheme = localStorage.getItem('theme');
+
+        if (currentTheme === 'light') {
+            body.classList.add('light-mode');
+            themeIcon.classList.replace('bi-sun-fill', 'bi-moon-fill');
+            themeIcon.style.color = '#001d3d';
+        }
+
+        themeIcon.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            
+            let theme = 'dark'; // Por defecto es oscuro
+
+            if (body.classList.contains('light-mode')) {
+                themeIcon.classList.replace('bi-sun-fill', 'bi-moon-fill');
+                themeIcon.style.color = '#001d3d';
+                theme = 'light'; // Si activó el claro, guardamos
+            } else {
+                themeIcon.classList.replace('bi-moon-fill', 'bi-sun-fill');
+                themeIcon.style.color = '#00A8E8';
+                theme = 'dark';
+            }
+
+            // 3. Guardar la elección
+            localStorage.setItem('theme', theme);
+        });
+    </script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
